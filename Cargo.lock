@@ -6470,7 +6470,7 @@ dependencies = [
 
 [[package]]
 name = "vnt2"
-version = "2.0.11"
+version = "2.0.11-alpha.1"
 dependencies = [
  "anyhow",
  "clap",
