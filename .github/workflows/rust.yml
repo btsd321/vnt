@@ -463,7 +463,9 @@ jobs:
           releaseDraft: false
           prerelease: false
           releaseAssetNamePattern: 'VNT.Desktop_[version]_windows_[arch][setup][ext]'
-          args: --bundles nsis,msi
+          # 只出 NSIS：WiX/MSI 要求 pre-release 标识必须是数字，像
+          # 2.0.11-alpha.2 这样的版本会让 msi 打包直接失败。NSIS 不受此限制。
+          args: --bundles nsis
 
   release-notes:
     name: Add download links to release notes
